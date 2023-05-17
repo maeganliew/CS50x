@@ -1,0 +1,48 @@
+address {
+    display: block;
+    font-style: italic;
+}
+
+body {
+    background-color: darkgrey;
+}
+
+img { /*jeff's image*/
+    margin-right: 150px;
+    margin-left: 720px;
+}
+
+b { /*description*/
+    margin-right: 150px;
+    margin-left: 490px;
+}
+
+p { /*description2*/
+    margin-right: 150px;
+    margin-left: 700px;
+}
+
+form, address {
+    margin-left: 165px;
+}
+
+footer {
+    margin-left: 800px;
+}
+
+.accordion {
+    margin-right: 165px;
+    margin-left: 165px;
+
+    background-color: #eee;
+    color: #444;
+    cursor: pointer;
+    padding: 6px;
+    border: none;
+    outline: none;
+    transition: 0.4s;
+}
+
+.b {  /*does nothing*/
+    font-family: Arial, Helvetica, sans-serif;
+}

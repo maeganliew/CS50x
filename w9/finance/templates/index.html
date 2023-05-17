@@ -1,0 +1,41 @@
+{%extends "layout.html" %}
+
+{% block main %}
+<h2>Stocks</h2>
+    <table class="table">
+        <thead>
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">Stock owned</th>
+            <th scope="col">Company Name</th>
+            <th scope="col">No. of shares</th>
+            <th scope="col">Current price</th>
+            <th scope="col">Total value</th>
+        </tr>
+        </thead>
+        <tbody>
+            {% for row in data %}
+                <tr>
+                    <th scope="row">1</th>
+                    <td>{{ row["symbol"] }}</td>
+                    <td>{{ row["company"] }}</td>
+                    <td>{{ row["shares"] }}</td>
+                    <td>{{ row["price"] }}</td>
+                    <td>{{ row["shares"] }} * {{ row["price"] }}</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+        <tfoot>
+            <tr>
+                <td></td> <td></td><td></td><td></td> <!--empty tags are for white space(aligning cash on the RHS)-->
+                <th scope="1">Cash</th>
+                <th scope="1">{{ cash }}</th>
+            </tr>
+            <tr>
+                <td></td> <td></td><td></td><td></td>
+                <th scope="1">Total</th>
+                <th scope="1">{{ cash }}</th>
+            </tr>
+        </tfoot>
+    </table>
+{% endblock %}

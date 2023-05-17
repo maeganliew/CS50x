@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+        <link href="styles.css" rel="stylesheet">
+        <title>Trivia!</title>
+        <script>
+            // TODO: Add code to check answers to questions
+            document.addEventListener('DOMContentLoaded', function(){
+
+                //MCQquestion1
+                let correct1 = document.querySelector("#Y1");
+                let wrong1 = document.querySelectorAll(".N1");
+                let message1 = document.querySelector("#message1");
+                correct1.addEventListener('click', function(){
+                    correct1.style.backgroundColor = "green";
+                    message1.innerHTML = "Correct!";
+                });
+                for (let i = 0; i < wrong1.length; i++)
+                {
+                    wrong1[i].addEventListener('click', function(){
+                        wrong1[i].style.backgroundColor = "red";
+                        message1.innerHTML = "Incorrect.";
+                    });
+                }
+
+                //MCQquestion2
+                let correct2 = document.querySelector("#Y2");
+                let wrong2 = document.querySelectorAll(".N2");
+                let message2 = document.querySelector("#message2");
+                correct2.addEventListener('click', function(){
+                    correct2.style.backgroundColor = "green";
+                    message2.innerHTML = "Correct!";
+                });
+                for (let i = 0; i < wrong2.length; i++)
+                {
+                    wrong2[i].addEventListener('click', function(){
+                        wrong2[i].style.backgroundColor = "red";
+                        message2.innerHTML = "Incorrect.";
+                    });
+                }
+
+                //FREEquestion1
+                document.querySelector("#check3").addEventListener('click', function(){
+                    let message3 = document.querySelector("#message3");
+                    let input=document.querySelector("#input3");
+                    if (input.value=="samsung" || input.value=="Samsung")
+                    {
+                        message3.innerHTML = "Correct!";
+                        input.style.backgroundColor = "green";
+                    }
+                    else
+                    {
+                        message3.innerHTML = "Incorrect.";
+                        input.style.backgroundColor = "red";
+                    }
+            });
+
+                //FREEquestion2
+                document.querySelector("#check4").addEventListener('click', function(){
+                    let message4 = document.querySelector("#message4");
+                    let input=document.querySelector("#input4");
+                    if (input.value=="pacific ocean" || input.value=="Pacific Ocean")
+                    {
+                        message4.innerHTML = "Correct!";
+                        input.style.backgroundColor = "green";
+                    }
+                    else
+                    {
+                        message4.innerHTML = "Incorrect.";
+                        input.style.backgroundColor = "red";
+                    }
+            });
+
+        });
+        </script>
+    </head>
+    <body>
+        <div class="header">
+            <h1>Trivia!</h1>
+        </div>
+
+        <div class="container">
+            <div class="section">
+                <h2>Part 1: Multiple Choice </h2>
+                <hr>
+                <!-- TODO: Add multiple choice question here -->
+                <h3> 1. What does “www” stand for in a website browser? </h3>
+                <button class="N1">Win Won Win</button>      <!--class for multiple elements, since there's more then one wrong ans-->
+                <button class="N1">Well Well Well</button>
+                <button id="Y1">World Wide Web</button>
+                <p id="message1"></p>
+
+                <br>
+                <h3> 2. How long is an Olympic swimming pool (in meters)? </h3>
+                <button class="N2">40m</button>
+                <button id="Y2">50m</button>
+                <button class="N2">60m</button>
+                <p id="message2"></p>
+            </div>
+
+            <div class="section">
+                <h2>Part 2: Free Response</h2>
+                <hr>
+                <!-- TODO: Add free response question here -->
+                <h3> 1. What is the name of the biggest technology company in South Korea? </h3>
+                <input id="input3" type="text">
+                <button id="check3">Check Answer</button>
+                <p id="message3"></p>
+
+                <br>
+                <h3> 2. What is the name of the World's largest ocean? </h3>
+                <input id="input4"  type="text">
+                <button id="check4">Check Answer</button>
+                <p id="message4"></p>
+            </div>
+        </div>
+    </body>
+</html>

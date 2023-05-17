@@ -1,0 +1,13 @@
+{%extends "layout.html" %}
+
+{% block main %}
+    <h1> Send a message to...</h1>
+    <br><br>
+    <form action="/send" method="post">
+        To: <input name="receiver" autofocus autocomplete="off" type="text" placeholder="Receiver"> <br><br><br><br>
+        <input name="text" autofocus autocomplete="off" type="text" placeholder="Message" style="width: 200px; height: 200px;"> <br><br><br>
+        From: <input name="sender" autofocus autocomplete="off" type="text" placeholder="Sender"> <br><br><br>
+        <button type="submit">Send Message</button>
+    </form>
+
+{% endblock %}

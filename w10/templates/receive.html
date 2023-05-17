@@ -1,0 +1,15 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Check your messages
+{% endblock %}
+
+{% block main %}
+<h1>Check your messages here</h1><br><br><br>
+    <form action="/receive" method="post">
+        <div class="mb-3">
+            <input autocomplete="off" autofocus class="form-control mx-auto w-auto" id="username" name="name" placeholder="your name" type="text">
+        </div><br>
+        <button class="btn btn-primary" type="submit">Check</button>
+    </form> <br><br>
+{% endblock %}
