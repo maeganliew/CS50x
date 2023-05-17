@@ -1,0 +1,11 @@
+sort1 uses: Bubble sort
+
+(bubble)How do you know?: performs the worst best when sorting reversed and random txt files, performs the second best when sorting sorted txt files
+
+sort2 uses: Merge sort
+
+(merge)How do you know?: performs the best when sorting every type of txt files
+
+sort3 uses: Selection sort
+
+(selection)How do you know?: performs the second best when sorting reversed and random txt files, performs the worst when sorting sorted txt files
